@@ -1903,6 +1903,33 @@ async def daily_backtest():
                     await channel.send(f"✅ **টুডেজ বেস্ট স্ট্রাটেজি:** {strategy_manager.strategies[best]['name']}")
         
         await asyncio.sleep(60)
+# main.py-র একদম শেষে এই কোড যোগ করো (bot.run(TOKEN) এর আগে)
+
+from threading import Thread
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import time
+
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is running!")
+    
+    def log_message(self, format, *args):
+        # লগ এড়িয়ে যাও
+        pass
+
+def run_http_server():
+    try:
+        server = HTTPServer(('0.0.0.0', 10000), HealthCheckHandler)
+        print("✅ হেলথ চেক সার্ভার চালু হয়েছে পোর্ট 10000-এ")
+        server.serve_forever()
+    except Exception as e:
+        print(f"❌ হেলথ চেক সার্ভার এরর: {e}")
+
+# HTTP সার্ভার আলাদা থ্রেডে চালাও
+Thread(target=run_http_server, daemon=True).start()
+print("✅ বট চালু হচ্ছে...")
 
 # -------- বট চালু করা -------- #
 bot.run(TOKEN)
