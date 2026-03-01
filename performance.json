@@ -1,0 +1,29 @@
+{
+  "daily_scores": {},
+  "best_strategy": "rsi_only",
+  "last_updated": "2026-03-01",
+  "rsi_macd": [
+    {
+      "date": "2026-03-01",
+      "win_rate": 40.0,
+      "total_return": 0.85,
+      "score": 20.43
+    }
+  ],
+  "rsi_only": [
+    {
+      "date": "2026-03-01",
+      "win_rate": 100.0,
+      "total_return": 4.62,
+      "score": 52.31
+    }
+  ],
+  "macd_only": [
+    {
+      "date": "2026-03-01",
+      "win_rate": 40.0,
+      "total_return": 0.0,
+      "score": 20.0
+    }
+  ]
+}

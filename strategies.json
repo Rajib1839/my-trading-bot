@@ -1,0 +1,39 @@
+{
+  "rsi_macd": {
+    "name": "RSI + MACD Strategy",
+    "indicators": [
+      "rsi",
+      "macd"
+    ],
+    "rsi_oversold": 30,
+    "rsi_overbought": 70,
+    "macd_threshold": 0,
+    "weight": 1.0,
+    "wins": 0,
+    "losses": 0,
+    "total_trades": 0
+  },
+  "rsi_only": {
+    "name": "RSI Only Strategy",
+    "indicators": [
+      "rsi"
+    ],
+    "rsi_oversold": 25,
+    "rsi_overbought": 75,
+    "weight": 0.8,
+    "wins": 0,
+    "losses": 0,
+    "total_trades": 0
+  },
+  "macd_only": {
+    "name": "MACD Only Strategy",
+    "indicators": [
+      "macd"
+    ],
+    "macd_threshold": 0,
+    "weight": 0.7,
+    "wins": 0,
+    "losses": 0,
+    "total_trades": 0
+  }
+}
