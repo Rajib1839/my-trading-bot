@@ -1,0 +1,11 @@
+discord.py
+requests
+pandas
+ta
+python-dotenv
+numpy
+scikit-learn
+joblib
+tensorflow
+keras
+asyncio
